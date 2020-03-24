@@ -1,4 +1,5 @@
 #!/bin/bash
+export HTTPS_PROXY=http://10.30.17.74:443
 yum update -y
 yum -y install epel-release
 yum -y install figlet
