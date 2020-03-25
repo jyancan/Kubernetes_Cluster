@@ -35,7 +35,7 @@ swapoff -a && sed -i '/swap/d' /etc/fstab
 echo "[TASK 6] Install Docker"
 yum install -y yum-utils nfs-utils device-mapper-persistent-data lvm2
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-yum install containerd.io
+yum install -y containerd.io-1.2.6
 #https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
 yum install -y docker-ce docker-ce-cli
 
