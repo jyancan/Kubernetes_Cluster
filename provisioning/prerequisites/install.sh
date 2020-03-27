@@ -61,3 +61,10 @@ net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF
 sysctl --system
+
+mkdir /etc/systemd/system/docker.service.d/
+touch /etc/systemd/system/docker.service.d/http-proxy.conf
+cat >>/etc/systemd/system/docker.service.d/http-proxy.conf<<EOF
+[Service]
+Environment="HTTPS_PROXY=http://10.30.17.74:443"
+EOF
