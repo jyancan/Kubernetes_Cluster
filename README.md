@@ -43,7 +43,7 @@
 
 ***Update host names for all nodes***
 `$ hostnamectl
-   hostnamectl setname $nameserver
+`$ hostnamectl setname $nameserver
 
 
 ## ***Step 2***
@@ -108,7 +108,7 @@ Then execute the kubeadm join command you get fron master node in step 5.
 
 <a id="dashboard"></a>
 
-## How to access Kubernetes Dashboard ?
+## How to access Kubernetes Dashboard ? OPTIONAL
 
 *The ***Kubernetes Dashboard*** can be accessed via the below URL with your ***master node IP*** with the same port ***30070****
 
@@ -117,7 +117,7 @@ Then execute the kubeadm join command you get fron master node in step 5.
 
 <a id="nfs-configuration"></a>
 
-## How to install NFS Server ?
+## How to install NFS Server ? OPTIONAL
 
 
 *Here we are going use master node IP as NFS Server IP instead of configuring separate node.*
@@ -126,8 +126,6 @@ Then execute the kubeadm join command you get fron master node in step 5.
 
 *Note: Please don't forget to change nfs.server in the below unix command with your master node IP configured.*
 
-
-***Unix Command!!!***
 
 `$ helm install stable/nfs-client-provisioner --name nfs-client-provisioner --set nfs.server=100.10.10.100 --set nfs.path=/mnt/storage --set storageClass.defaultClass=true`
 
