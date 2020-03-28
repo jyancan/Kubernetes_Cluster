@@ -59,8 +59,6 @@ Then give permissions executing the below command.*
 
 ***Execute the prerequisite script on all master/worker nodes***
 
-![enter image description here](https://lh3.googleusercontent.com/ilOz9uQHxUPmMM1JKlg3uBHZoBFWsFkHdUu2gsxwJe679fwDgPQHdZ-vhHiNbrMJaPAJCxva8LYGqg)
-
  `$ cd Kubernetes_Cluster/provisioning/prerequisites/
  `$ ./install.sh`
 
