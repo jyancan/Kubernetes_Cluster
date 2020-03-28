@@ -1,7 +1,7 @@
 #!/bin/bash
 systemctl enable NetworkManager
 systemctl enable NetworkManager.service
-echo 'export HTTPS_PROXY=http://10.30.17.74:443' >> ~/.bash_profile
+#echo 'export HTTPS_PROXY=http://10.30.17.74:443' >> ~/.bash_profile
 
 yum update -y
 yum -y install epel-release
@@ -68,3 +68,5 @@ cat >>/etc/systemd/system/docker.service.d/http-proxy.conf<<EOF
 [Service]
 Environment="HTTPS_PROXY=http://10.30.17.74:443"
 EOF
+
+reboot
