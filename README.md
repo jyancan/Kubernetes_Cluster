@@ -2,7 +2,7 @@
 ![enter image description here](https://lh3.googleusercontent.com/XLVR6VqsqNEAjfIBec5vSu1ke5e1U7fLGuKvCWZP8R-zsG_9eZRtP8VO4dBVkBPqwEt6WVDp-VQuww)
 ## About...
 
-*This repository is used to create ***Kubernetes Cluster*** using **8** simple steps on ***On premise servers**** 
+*This repository is used to create ***Kubernetes Cluster*** using **8** simple steps on ***On premise servers**** and using proxy server to internet connection.
 
 
 ## Table of Contents
