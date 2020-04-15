@@ -88,7 +88,7 @@ Then give permissions executing the below command.*
 
 Then execute the kubeadm join command you get fron master node in step 5.
 
-## ***Step 7***
+## ***Step 7*** OPTIONAL
 
 ***Execute the below script only on master node IP to install HELM***
 
