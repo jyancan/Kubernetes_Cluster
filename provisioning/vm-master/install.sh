@@ -13,8 +13,9 @@ echo 'export KUBECONFIG=/etc/kubernetes/admin.conf' >> ~/.bash_profile
 source ~/.bash_profile
 
 echo "[TASK 2] Start master"
-kubeadm init --ignore-preflight-errors all --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.66.30.11 --image-repository registry.aliyuncs.com/google_containers
-#--token-ttl 0
+kubeadm init --ignore-preflight-errors all --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.66.30.11 --network-plugin=kubenet --reconcile-cidr
+#--token-ttl 0 --image-repository registry.aliyuncs.com/google_containers
+
 
 echo "[TASK 3] Install Flannel"
 sysctl net.bridge.bridge-nf-call-iptables=1
