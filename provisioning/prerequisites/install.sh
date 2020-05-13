@@ -66,7 +66,7 @@ mkdir /etc/systemd/system/docker.service.d/
 touch /etc/systemd/system/docker.service.d/http-proxy.conf
 cat >>/etc/systemd/system/docker.service.d/http-proxy.conf<<EOF
 [Service]
-Environment="HTTPS_PROXY=http://10.30.17.74:443"
+#Environment="HTTPS_PROXY=http://10.30.17.74:443"
 EOF
 
 reboot
