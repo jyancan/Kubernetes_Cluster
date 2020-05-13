@@ -16,10 +16,13 @@ echo "[TASK 2] Start master"
 kubeadm init --ignore-preflight-errors all --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.66.30.11 --token-ttl 0 
 #--network-plugin=kubenet --reconcile-cidr --config=/root/admin.conf  --image-repository registry.aliyuncs.com/google_containers
 
-echo "[TASK 3] Install Flannel"
-sysctl net.bridge.bridge-nf-call-iptables=1
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+#echo "[TASK 3] Install Flannel"
+#sysctl net.bridge.bridge-nf-call-iptables=1
+#kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
+echo "[TASK 3] Install Calico"
+sysctl net.bridge.bridge-nf-call-iptables=1
+kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 
 echo "[TASK 4] Display PODS"
 kubectl get pods --all-namespaces
